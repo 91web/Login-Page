@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Sleek Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <form class="login-form">
+        <p class="login-text">
+            <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-lock fa-stack-1x"></i>
+    </span>
+        </p>
+        <input type="email" class="login-username" autofocus="true" required="true" placeholder="Email" id="email"> <input type="password" class="login-password" required="true" placeholder="Password" id="password"> <input type="submit" name="Login" value="Login"
+            class="login-submit" onclick="return checkCredentials()"> </form>
+
+    <a href="#" class="login-forgot-pass" onclick="showLoginDetails()">forgot password?</a>
+
+    <div class="underlay-photo"></div>
+    <div class="underlay-black"></div>
+    <!-- partial -->
+    <script>
+        function checkCredentials() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            if (email === "boy@gmail.com" && password === "12345") {
+                alert("Login Successful")
+                return true;
+            } else {
+                alert("Invalid email or password");
+                return false;
+            }
+        }
+
+        function showLoginDetails() {
+            alert("Your login details are:\nEmail: boy@gmail.com\nPassword: 12345");
+        }
+    </script>
+</body>
+
+</html>
